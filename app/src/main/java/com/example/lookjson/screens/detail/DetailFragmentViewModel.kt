@@ -1,4 +1,6 @@
 package com.example.lookjson.screens.detail
 
-class DetailFragmentViewModel {
+import androidx.lifecycle.ViewModel
+
+class DetailFragmentViewModel: ViewModel() {
 }

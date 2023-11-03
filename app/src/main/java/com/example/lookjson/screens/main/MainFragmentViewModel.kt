@@ -1,4 +1,6 @@
 package com.example.lookjson.screens.main
 
-class MainFragmentViewModel {
+import androidx.lifecycle.ViewModel
+
+class MainFragmentViewModel: ViewModel() {
 }

@@ -1,4 +1,6 @@
 package com.example.lookjson.screens.favorite
 
-class FavoriteFragmentViewModel {
+import androidx.lifecycle.ViewModel
+
+class FavoriteFragmentViewModel: ViewModel() {
 }
