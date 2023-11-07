@@ -5,12 +5,16 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStoreOwner
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lookjson.MAIN
 import com.example.lookjson.R
+import com.example.lookjson.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
-    private var mBinding: FragmentMainBinding ?= null
+    private var mBinding: FragmentMainBinding?= null
     private val binding get() = mBinding!!
     lateinit var recyclerView: RecyclerView
     private val adapter by lazy { MainAdapter() }
@@ -29,7 +33,9 @@ class MainFragment : Fragment() {
     }
 
     private fun init() {
-        TODO("Not yet implemented")
+        val viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
+        recyclerView = binding.rvMain
+        recyclerView.adapter = adapter
     }
 
     override fun onDestroyView() {
