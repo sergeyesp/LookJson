@@ -1,6 +1,6 @@
 package com.example.lookjson.models
 
-data class Result(
+data class MovieItemModel(
     val adult: Boolean,
     val gender: Int,
     val id: Int,
