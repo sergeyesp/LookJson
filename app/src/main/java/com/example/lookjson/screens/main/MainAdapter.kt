@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.lookjson.MAIN
 import com.example.lookjson.R
 import com.example.lookjson.models.KnownFor
 import com.example.lookjson.models.MovieItemModel
@@ -27,5 +29,11 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.itemView.item_title.text = listMovies[position].title
         holder.itemView.item_data.text = listMovies[position].release_date
+
+        Glide.with(MAIN)
+            .load(listMovies[position].poster_path)
+            .centerCrop()
+            .placeholder(R.drawable.ic_launcher_foreground)
+            .into(holder.itemView.item_img)
     }
 }
