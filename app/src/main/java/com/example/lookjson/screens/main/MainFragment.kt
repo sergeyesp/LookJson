@@ -12,7 +12,7 @@ import com.example.lookjson.MAIN
 import com.example.lookjson.R
 import com.example.lookjson.databinding.FragmentMainBinding
 
-class MainFragment : Fragment() {
+class MainFragment : Fragment(){
 
     private var mBinding: FragmentMainBinding?= null
     private val binding get() = mBinding!!
