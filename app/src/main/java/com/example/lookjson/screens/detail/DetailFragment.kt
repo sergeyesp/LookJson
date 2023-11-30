@@ -35,6 +35,10 @@ class DetailFragment : Fragment() {
         val viewModel = ViewModelProvider(this)[DetailFragmentViewModel::class.java]
     }
 
+    private fun ViewModelProvider(owner: DetailFragment): ViewModelProvider {
+        return ViewModelProvider(this)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         mBinding = null

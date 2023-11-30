@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.HasDefaultViewModelProviderFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.recyclerview.widget.RecyclerView
@@ -36,6 +37,10 @@ class MainFragment : Fragment(){
         val viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
         recyclerView = binding.rvMain
         recyclerView.adapter = adapter
+    }
+
+    private fun ViewModelProvider(owner: MainFragment): ViewModelProvider {
+        return ViewModelProvider(this)
     }
 
     override fun onDestroyView() {

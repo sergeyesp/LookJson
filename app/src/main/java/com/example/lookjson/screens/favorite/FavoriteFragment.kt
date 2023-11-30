@@ -39,6 +39,10 @@ class FavoriteFragment : Fragment() {
         recyclerView.adapter = adapter
     }
 
+    private fun ViewModelProvider(owner: FavoriteFragment): ViewModelProvider {
+        return ViewModelProvider(this)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         mBinding = null
